@@ -1,0 +1,113 @@
+/* 共通設定 */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: "RocknRoll One", sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* ヘッダー */
+    .navbar-brand {
+        font-weight: 900;
+        font-style: normal;
+    }
+    .navbar-nav {
+        font-weight: 500;
+        font-style: normal;
+    }
+
+/* フッター */
+    footer {
+        background-color: #f8f9fa;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .footer-text {
+        font-size: small;
+        color: #7b8286;
+    }
+
+/* Xリンク */
+    .x-icon {
+        font-size: 25px;
+        color: #000000;
+    }
+    .x-icon:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+
+/* カード */
+    .card {
+        position: relative;
+        overflow: hidden;
+    }
+    .card-text {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        display: flex;
+        flex-direction: column;
+        font-size: 10pt;
+    }
+    .card-img-top {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+
+/* カードの一言表示用 */
+    .card-img-top {
+        position: relative;
+        /* 子要素の基準となる */
+    }
+    .card-img-top img {
+        width: 100%;
+        /* 画像をカードの幅に合わせる */
+        height: auto;
+        /* 画像のアスペクト比を保つ */
+    }
+    /* オーバーレイのスタイル設定 */
+    .card-overlay {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        display: flex;
+        flex-direction: column;
+        font-size: 10pt;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: black;
+        /* 黒文字 */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    /* オーバーレイを画像部分だけに表示 */
+    .card-img-top:hover .card-overlay,
+    .card-img-top:focus-within .card-overlay {
+        opacity: 1;
+    }
+    /* スマホ向け（タップ時に表示） */
+    @media (max-width: 767px) {
+        .card-img-top:active .card-overlay {
+            opacity: 1;
+        }
+    }
+
+    .description {
+        font-size: 10pt;
+    }
+
+/* 会社情報 */
+    table {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
